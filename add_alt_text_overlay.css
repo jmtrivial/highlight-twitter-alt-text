@@ -1,6 +1,11 @@
 /** This snippet adds an overlay to images on Twitter, so the alt text
   * (if there is any) is shown at the top of an image.
   */
+div[data-testid="tweetPhoto"]:hover:not([aria-label="Image"]):after,div[data-testid="tweetPhoto"]:hover:not([aria-label="Image"]),
+div[data-testid="previewInterstitial"]:hover:not([aria-label="Vidéo intégrée"]) {
+    margin: 0 !important;
+}
+
 div[data-testid="tweetPhoto"]:hover:not([aria-label="Image"]):after,
 div[data-testid="previewInterstitial"]:hover:not([aria-label="Vidéo intégrée"]):after {
     content: attr(aria-label);
